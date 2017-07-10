@@ -22,11 +22,14 @@ export class HttpUtilService {
 	}
 
 	extrairDados(response: Response) {
+		console.log('chegou no sucess');
     	let data = response.json();
     	return data || {};
   	}
 
   	processarErros(erro: any) {
+		console.log('chegou no erro');
+		console.log(erro);		  
 	    return Observable.throw('Erro acessando servidor remoto.');
 	}
 
